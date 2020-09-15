@@ -1,2 +1,4 @@
 #!/bin/bash
-./run_bc.sh P1-noXY.mutect.vcf P1-noXY.battenberg.txt P1-noXY.cellularity_ploidy.txt P1
+
+./parseInputData test.vcf test.BB test.txt
+R CMD BATCH --no-save --no-restore '--args test.txt test.pur' BayCloneC.R ./test.log
